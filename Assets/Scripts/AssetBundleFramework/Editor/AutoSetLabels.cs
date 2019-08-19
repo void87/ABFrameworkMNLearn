@@ -88,8 +88,8 @@ namespace ABFramework {
             AssetImporter tempImporter = AssetImporter.GetAtPath(assetFilePath);
             tempImporter.assetBundleName = abName;
 
-            Debug.Log("assetFilePath: " + assetFilePath);
-            Debug.Log("abName: " + abName);
+            //Debug.Log("assetFilePath: " + assetFilePath);
+            //Debug.Log("abName: " + abName);
 
             if (fileInfo.Extension == ".unity") {
                 tempImporter.assetBundleVariant = "u3d";

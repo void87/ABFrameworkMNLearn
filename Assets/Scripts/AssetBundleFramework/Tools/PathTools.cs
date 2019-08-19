@@ -62,4 +62,23 @@ public class PathTools {
         }
         return platformName;
     }
+
+    /// <summary>
+    /// 获取WWW下载(AB包)路径
+    /// </summary>
+    public static string GetWWWPath() {
+        string WWWPath = string.Empty;
+
+        switch (Application.platform) {
+            case RuntimePlatform.WindowsPlayer:
+            case RuntimePlatform.WindowsEditor:
+                WWWPath = "file://" + GetABOutputPath();
+                break;
+            case RuntimePlatform.Android:
+                WWWPath = "jar:file://" + GetABOutputPath();
+                break;
+        }
+
+        return WWWPath;
+    }
 }
