@@ -45,7 +45,7 @@ public class PathTools {
     /// <summary>
     /// 获取平台名称
     /// </summary>
-    private static string GetPlatformName() {
+    public static string GetPlatformName() {
         string platformName = string.Empty;
 
         switch (Application.platform) {
@@ -76,6 +76,9 @@ public class PathTools {
                 break;
             case RuntimePlatform.Android:
                 WWWPath = "jar:file://" + GetABOutputPath();
+                break;
+            case RuntimePlatform.IPhonePlayer:
+                WWWPath = GetABOutputPath() + "/Raw/";
                 break;
         }
 

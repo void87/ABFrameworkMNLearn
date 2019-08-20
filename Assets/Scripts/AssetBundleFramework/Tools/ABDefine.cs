@@ -10,7 +10,7 @@ namespace ABFramework {
 
 
     public class ABDefine {
-
+        public static readonly string ASSETBUNDLEMANIFEST = "AssetBundleManifest";
     }
 }
 

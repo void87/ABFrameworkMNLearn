@@ -13,7 +13,7 @@ namespace ABFramework {
             string abOutPathDir = string.Empty;
 
             abOutPathDir = PathTools.GetABOutputPath();
-
+        
             if (!Directory.Exists(abOutPathDir)) {
                 Directory.CreateDirectory(abOutPathDir);
             }

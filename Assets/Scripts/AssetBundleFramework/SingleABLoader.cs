@@ -27,6 +27,7 @@ namespace ABFramework {
 
         private string abDownloadPath;
 
+
         public SingleABLoader(string abName, ABLoadComplete loadComplete) {
             assetLoader = null;
 
@@ -107,9 +108,9 @@ namespace ABFramework {
         /// <summary>
         /// 查询当前AssetBundle包中所有的资源
         /// </summary>
-        public string[] RetrieveAllAssetName() {
+        public string[] GetAllAssetName() {
             if (assetLoader != null) {
-                return assetLoader.RetrieveAllAssetName();
+                return assetLoader.GetAllAssetName();
             }
             Debug.LogError(GetType() + "/RetrieveAllAssetName()/参数 assetLoader == null, 请检查!");
 

@@ -5,8 +5,7 @@ using UnityEngine;
 namespace ABFramework {
 
     /// <summary>
-    /// 框架主流程
-    ///     1. AB资源加载类
+    /// 框架主流程 1. AB资源加载类
     /// 
     /// AB包内资源的加载
     /// 
@@ -20,13 +19,13 @@ namespace ABFramework {
 
         private AssetBundle currentAB;
 
-        private Hashtable ht;
+        private Dictionary<string, Object> ht;
 
 
         public AssetLoader(AssetBundle ab) {
             if (ab != null) {
                 currentAB = ab;
-                ht = new Hashtable();
+                ht = new Dictionary<string, Object>();
             } else {
                 Debug.LogError(GetType() + "/构造函数 AssetBundle()/ 参数 ab == null!,请检查");
             }
@@ -89,7 +88,7 @@ namespace ABFramework {
         /// 查询当前AssetBundle中包含的所有资源名称
         /// </summary>
         /// <returns></returns>
-        public string[] RetrieveAllAssetName() {
+        public string[] GetAllAssetName() {
             return currentAB.GetAllAssetNames();
         }
     }

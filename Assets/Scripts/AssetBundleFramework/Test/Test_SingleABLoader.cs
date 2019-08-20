@@ -31,8 +31,10 @@ namespace ABFramework {
         #endregion
 
         void Start() {
-            SingleABLoader dependABLoader = new SingleABLoader(dependABName1, LoadDependAB1Complete);
-            StartCoroutine(dependABLoader.LoadAssetBundle());
+            //SingleABLoader dependABLoader = new SingleABLoader(dependABName1, LoadDependAB1Complete);
+            //StartCoroutine(dependABLoader.LoadAssetBundle());
+
+            //StartCoroutine(ABManifestLoader.Instance.LoadManifest());
         }
 
         void Update() {
@@ -63,7 +65,7 @@ namespace ABFramework {
             var prefab = loader.LoadAsset(assetName1, false);
             GameObject.Instantiate(prefab);
 
-            string[] arr = loader.RetrieveAllAssetName();
+            string[] arr = loader.GetAllAssetName();
 
             foreach (var item in arr) {
                 Debug.Log(item);

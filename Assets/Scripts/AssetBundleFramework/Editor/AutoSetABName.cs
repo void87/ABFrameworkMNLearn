@@ -13,12 +13,12 @@ namespace ABFramework {
     ///        如果是目录,则继续"递归"访问里面的文件,直到定位到文件
     ///     b. 找到文件,则使用AssetImporter类,标记"包名"与"后缀名"
     /// </summary>
-    public class AutoSetLabels {
+    public class AutoSetABName {
 
         /// <summary>
         /// 设置AB包名称
         /// </summary>
-        [MenuItem("AssetBundleTools/Set AB Label")]
+        [MenuItem("AssetBundleTools/Set AB Name")]
         public static void SetABName() {
 
             AssetDatabase.RemoveUnusedAssetBundleNames();
